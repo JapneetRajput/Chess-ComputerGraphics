@@ -563,6 +563,9 @@ int main()
                     {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
     initgraph(&gd,&gm,"D:\\TC\\BGI");//initialize graphic mode
 //    setbkcolor(WHITE);//set color of background to darkgray
+//    int y;
+    scanf("%d",&y);
+    printf("AN ANIMATED CHESS MATCH REPLAY OF MAGNUS CARLSEN VS VISHWANATHAN ANAND\nHELD IN 2005\nTOURNAMENT NAME: CIUDAD DE LEON(XVIII");
     setcolor(WHITE);
 	outtextxy(25,65,"8");
 	outtextxy(25,115,"7");
@@ -893,148 +896,719 @@ int main()
     kingBlack(250,50);
 	kingBlue(250,400);
 
-    int d=1000;
+    int d=0;
 	delay(d);
 
-	/*kingGreen(250,50);
-	delay(3000);
-	kingBlack(250,150);
-	delay(3000);*/
-    pawnWhite(250,350);
-    delay(d);
+//1st move
+
+   pawnWhite(250,350);
+    int D=1;
+    for(int e=350; e>=250;e=e-D){
+        pawnBlue1(250,e);
+        setcolor(WHITE);
+        for(int e =350; e<400; e+=1){
+            line(251,e,299,e);
+        }
+        setcolor(GREEN);
+        for(int e =300 ;e<350; e+=1){
+            line(251,e,299,e);
+        }
+        setcolor(WHITE);
+        for(int e =250; e<300; e+=1){
+            line(251,e,299,e);
+        }
+    }
+
+//2nd move
+
     pawnBlue1(250,250);
-
     delay(d);
-
     pawnGreen(150,100);
-    delay(d);
+    for(int e=100; e<=200;e=e+D){
+        pawnBlack1(150,e);
+        setcolor(GREEN);
+        for(int e =100; e<150; e+=1){
+            line(151,e,199,e);
+        }
+        setcolor(WHITE);
+        for(int e =150; e<200; e+=1){
+            line(151,e,199,e);
+        }
+        setcolor(GREEN);
+        for(int e =200; e<250; e+=1){
+            line(151,e,199,e);
+        }
+    }
     pawnBlack1(150,200);
 
     delay(d);
 
+//3rd move
+
     knightGreen(350,400);
-    delay(d);
+    for(int e=400; e>=350;e=e-D){
+        knightBlue(350,e);
+        setcolor(GREEN);
+        for(int e =400; e<450; e+=1){
+            line(351,e,399,e);
+        }
+        setcolor(WHITE);
+        for(int e =350; e<400; e+=1){
+            line(351,e,399,e);
+        }
+    }
+    for(int e=350; e>=300;e=e-D){
+        knightBlue(350,e);
+        setcolor(WHITE);
+        for(int e =350; e<400; e+=1){
+            line(351,e,399,e);
+        }
+        setcolor(GREEN);
+        for(int e =300; e<350; e+=1){
+            line(351,e,399,e);
+        }
+    }
+    pawnBlue1(350,350);
+    for(int e = 350;e>=300;e=e-D){
+        knightBlue(e,300);
+        setcolor(GREEN);
+        for(int e =300; e<350; e+=1){
+            line(350,e,399,e);
+        }
+        setcolor(WHITE);
+        for(int e =300; e<350; e+=1){
+            line(301,e,349,e);
+        }
+    }
     knightBlue(300,300);
+
+//4th move
 
     delay(d);
 
     knightGreen(100,50);
-    delay(d);
+    for(int e=50; e<=100;e=e+D){
+        knightBlack(100,e);
+        setcolor(GREEN);
+        for(int e =50; e<100; e+=1){
+            line(101,e,149,e);
+        }
+        setcolor(WHITE);
+        for(int e =100; e<150; e+=1){
+            line(101,e,149,e);
+        }
+    }
+    for(int e=100; e<=150;e=e+D){
+        knightBlack(100,e);
+        setcolor(WHITE);
+        for(int e =100; e<150; e+=1){
+            line(100,e,149,e);
+        }
+        setcolor(GREEN);
+        for(int e =150; e<200; e+=1){
+            line(101,e,149,e);
+        }
+    }
+    pawnBlack1(100,100);
+    for(int e = 100;e<=150;e=e+D){
+        knightBlack(e,150);
+        setcolor(GREEN);
+        for(int e =150; e<200; e+=1){
+            line(101,e,149,e);
+        }
+        setcolor(WHITE);
+        for(int e =150; e<200; e+=1){
+            line(150,e,199,e);
+        }
+    }
     knightBlack(150,150);
+
+//5th move
 
     delay(d);
 
     pawnGreen(200,350);
-    delay(d);
+    for(int e=350; e>=250;e=e-D){
+        pawnBlue1(200,e);
+        setcolor(GREEN);
+        for(int e =350; e<400; e+=1){
+            line(201,e,249,e);
+        }
+        setcolor(WHITE);
+        for(int e =300 ;e<350; e+=1){
+            line(201,e,249,e);
+        }
+        setcolor(GREEN);
+        for(int e =250; e<300; e+=1){
+            line(201,e,249,e);
+        }
+    }
     pawnBlue1(200,250);
+
+//6th move
 
     delay(d);
     pawnGreen(150,200);
-    delay(d);
+    for(int e=200,f=150; e<=250,f<=200;e=e+D,f=f+D){
+        pawnBlack1(f,e);
+        setcolor(GREEN);
+        for(int e =200; e<250; e+=1){
+            line(151,e,199,e);
+        }
+        setcolor(WHITE);
+        for(int e =200; e<250; e+=1){
+            line(200,e,248,e);
+        }
+        setcolor(WHITE);
+        for(int e =250; e<300; e+=1){
+            line(151,e,199,e);
+        }
+        setcolor(GREEN);
+        for(int e =250 ;e<300; e+=1){
+            line(200,e,248,e);
+        }
+    }
     pawnBlack1(200,250);
-
-
     delay(d);
+
+//7th move
 
     knightWhite(300,300);
-    delay(d);
+    for(int e = 300;e>=250;e=e-D){
+        knightBlue(e,300);
+        setcolor(WHITE);
+        for(int e =300; e<350; e+=1){
+            line(300,e,349,e);
+        }
+        setcolor(GREEN);
+        for(int e =300; e<350; e+=1){
+            line(251,e,299,e);
+        }
+    }
+    for(int e = 250;e>=200;e=e-D){
+        knightBlue(e,300);
+        setcolor(GREEN);
+        for(int e =300; e<350; e+=1){
+            line(250,e,299,e);
+        }
+        setcolor(WHITE);
+        for(int e =300; e<350; e+=1){
+            line(201,e,249,e);
+        }
+    }
+    for(int e=300; e>=250;e=e-D){
+        knightBlue(200,e);
+        setcolor(WHITE);
+        for(int e =300; e<350; e+=1){
+            line(201,e,249,e);
+        }
+        setcolor(GREEN);
+        for(int e =250; e<300; e+=1){
+            line(201,e,249,e);
+        }
+    }
     pawnGreen(200,250);
-    delay(d);
     knightBlue(200,250);
 
     delay(d);
 
-    pawnGreen(250,100);
-    delay(d);
-    pawnBlack1(250,150);
+//8th move
 
+    pawnGreen(250,100);
+    for(int e=100; e<=150;e=e+D){
+        pawnBlack1(250,e);
+        setcolor(GREEN);
+        for(int e =100; e<150; e+=1){
+            line(251,e,299,e);
+        }
+        setcolor(WHITE);
+        for(int e =150; e<200; e+=1){
+            line(251,e,299,e);
+        }
+    }
+    pawnBlack1(250,150);
     delay(d);
+
+//9th move
 
     knightWhite(100,400);
-    delay(d);
+    for(int i=400;i>=350;i=i-D){
+        knightBlue(100,i);
+        setcolor(WHITE);
+        for(int i=400;i<450;i+=1){
+            line(101,i,149,i);
+        }
+        setcolor(GREEN);
+        for(int i=350;i<400;i+=1){
+            line(101,i,149,i);
+        }
+    }
+    for(int e=350; e>=300;e=e-D){
+        knightBlue(100,e);
+          setcolor(GREEN);
+        for(int e =350; e<400; e+=1){
+            line(101,e,149,e);
+        }
+        setcolor(WHITE);
+        for(int e =300; e<350; e+=1){
+            line(101,e,149,e);
+        }
+    }
+    pawnBlue1(100,350);
+    for(int e = 100;e<=150;e=e+D){
+        knightBlue(e,300);
+        setcolor(WHITE);
+        for(int e =300; e<350; e+=1){
+            line(101,e,150,e);
+        }
+        setcolor(GREEN);
+        for(int e =300; e<350; e+=1){
+            line(151,e,199,e);
+        }
+    }
     knightBlue(150,300);
 
     delay(d);
 
+//10th move
+
     pawnGreen(50,100);
-    delay(d);
+    for(int e=100; e<=150;e=e+D){
+        pawnBlack1(50,e);
+        setcolor(GREEN);
+        for(int e =100; e<150; e+=1){
+            line(50,e,99,e);
+        }
+        setcolor(WHITE);
+        for(int e =150; e<200; e+=1){
+            line(50,e,99,e);
+        }
+    }
     pawnBlack1(50,150);
 
     delay(d);
 
+//11th move
+
     bishopGreen(150,400);
-    delay(d);
+    for(int e=400,f=150; e>=350,f<=200;e=e-D,f=f+D){
+        bishopBlue(f,e);
+        setcolor(GREEN);
+        for(int e =400 ;e<450; e+=1){
+            line(151,e,199,e);
+        }
+        setcolor(WHITE);
+        for(int e =350; e<400; e+=1){
+            line(151,e,199,e);
+        }
+        setcolor(GREEN);
+        for(int e =350; e<400; e+=1){
+            line(200,e,249,e);
+        }
+        setcolor(WHITE);
+        for(int e =400; e<450; e+=1){
+            line(200,e,249,e);
+        }
+        queenBlue(200,400);
+        pawnBlue1(150,350);
+    }
+	queenBlue(200,400);
+	pawnBlue1(150,350);
+    bishopGreen(150,400);
+    for(int e=350,f=200; e>=300,f<=250;e=e-D,f=f+D){
+        bishopBlue(f,e);
+        setcolor(GREEN);
+        for(int e =350; e<400; e+=1){
+            line(201,e,249,e);
+        }
+        setcolor(WHITE);
+        for(int e =300; e<350; e+=1){
+            line(201,e,249,e);
+        }
+        setcolor(GREEN);
+        for(int e =300; e<350; e+=1){
+            line(250,e,299,e);
+        }
+        setcolor(WHITE);
+        for(int e =350; e<400; e+=1){
+            line(250,e,299,e);
+        }
+    }
     bishopBlue(250,300);
 
     delay(d);
 
-	knightWhite(350,50);
-	delay(d);
-	knightBlack(300,150);
+//12th move
+
+    knightGreen(100,50);
+    for(int e=50; e<=100;e=e+D){
+        knightBlack(350,e);
+        setcolor(WHITE);
+        for(int e =50; e<100; e+=1){
+            line(351,e,399,e);
+        }
+        setcolor(GREEN);
+        for(int e =100; e<150; e+=1){
+            line(351,e,399,e);
+        }
+    }
+    for(int e=100; e<=150;e=e+D){
+        knightBlack(350,e);
+        setcolor(GREEN);
+        for(int e =100; e<150; e+=1){
+            line(351,e,399,e);
+        }
+        setcolor(WHITE);
+        for(int e =150; e<200; e+=1){
+            line(351,e,399,e);
+        }
+    }
+    pawnBlack1(350,100);
+    for(int e = 350;e>=300;e=e-D){
+        knightBlack(e,150);
+        setcolor(WHITE);
+        for(int e =150; e<200; e+=1){
+            line(350,e,399,e);
+        }
+        setcolor(GREEN);
+        for(int e =150; e<200; e+=1){
+            line(300,e,349,e);
+        }
+    }
+    knightBlack(300,150);
 
 	delay(d);
 
-	queenBlue(200, 400);
-	delay(d);
+//13th move
+
 	queenWhite(200,400);
+    for(int e=400; e>=350;e=e-D){
+        queenBlue(200,e);
+        setcolor(WHITE);
+        for(int e =400; e<450; e+=1){
+            line(201,e,249,e);
+        }
+        setcolor(GREEN);
+        for(int e =350 ;e<400; e+=1){
+            line(201,e,249,e);
+        }
+    }
+    queenBlue(200,350);
 	delay(d);
-	queenBlue(200,350);
 
-	delay(d);
+//14th move japneet aake karega...
 
+    for(int e=50,f=300;e<=100,f>=250;e+=1,f-=1){
+        bishopBlack(f,e);
+        setcolor(GREEN);
+        for(int e=50;e<100;e+=1){
+            line(300,e,349,e);
+        }
+        setcolor(WHITE);
+        for(int e=100;e<150;e+=1){
+            line(300,e,349,e);
+        }
+        setcolor(WHITE);
+        for(int e=50;e<100;e+=1){
+            line(251,e,299,e);
+        }
+        setcolor(GREEN);
+        for(int e=100;e<150;e+=1){
+            line(251,e,299,e);
+        }
+        kingBlack(250,50);
+        pawnBlack1(300,100);
+    }
+    kingBlack(250,50);
+    pawnBlack1(300,100);
     bishopBlack(300,50);
-	delay(d);
+    for(int e=100,f=250;e<=150,f>=200;e+=1,f-=1){
+        bishopBlack(f,e);
+        setcolor(GREEN);
+        for(int e=100;e<150;e+=1){
+            line(250,e,299,e);
+        }
+        setcolor(WHITE);
+        for(int e=150;e<200;e+=1){
+            line(250,e,299,e);
+        }
+        setcolor(WHITE);
+        for(int e=100;e<150;e+=1){
+            line(201,e,249,e);
+        }
+        setcolor(GREEN);
+        for(int e=150;e<200;e+=1){
+            line(201,e,249,e);
+        }
+        pawnBlack1(200,100);
+        pawnBlack1(250,150);
+    }
+    pawnBlack1(200,100);
+    pawnBlack1(250,150);
 	bishopGreen(300,50);
-	delay(d);
+    for(int e=150,f=200;e<=200,f>=150;e+=1,f-=1){
+        bishopBlack(f,e);
+        setcolor(GREEN);
+        for(int e=150;e<200;e+=1){
+            line(200,e,249,e);
+        }
+        setcolor(WHITE);
+        for(int e=200;e<250;e+=1){
+            line(200,e,249,e);
+        }
+        setcolor(WHITE);
+        for(int e=150;e<200;e+=1){
+            line(151,e,199,e);
+        }
+        setcolor(GREEN);
+        for(int e=200;e<250;e+=1){
+            line(151,e,199,e);
+        }
+        knightBlack(150,150);
+    }
+    knightBlack(150,150);
+    for(int e=200,f=150;e<=250,f>=100;e+=1,f-=1){
+        bishopBlack(f,e);
+        setcolor(GREEN);
+        for(int e=200;e<250;e+=1){
+            line(150,e,199,e);
+        }
+        setcolor(WHITE);
+        for(int e=250;e<300;e+=1){
+            line(150,e,199,e);
+        }
+        setcolor(WHITE);
+        for(int e=200;e<250;e+=1){
+            line(101,e,149,e);
+        }
+        setcolor(GREEN);
+        for(int e=250;e<300;e+=1){
+            line(101,e,149,e);
+        }
+    }
 	bishopBlack(100,250);
 
 	delay(d);
 
+//15th move
+
     pawnGreen(300,350);
-    delay(d);
+     //pawnWhite(250,350);
+    for(int e=350; e>=300;e=e-D){
+        pawnBlue1(300,e);
+        setcolor(GREEN);
+        for(int e =350; e<400; e+=1){
+            line(301,e,349,e);
+        }
+        setcolor(WHITE);
+        for(int e =300 ;e<350; e+=1){
+            line(301,e,349,e);
+        }
+    }
     pawnBlue1(300,300);
 
-
     delay(d);
+
+//16th move
 
     pawnWhite(200,100);
-    delay(d);
+    //pawnGreen(150,100);
+    for(int e=100; e<=200;e=e+D){
+        pawnBlack1(200,e);
+        setcolor(WHITE);
+        for(int e =100; e<150; e+=1){
+            line(201,e,249,e);
+        }
+        setcolor(GREEN);
+        for(int e =150; e<200; e+=1){
+            line(201,e,249,e);
+        }
+        setcolor(WHITE);
+        for(int e =200; e<250; e+=1){
+            line(201,e,249,e);
+        }
+    }
     pawnBlack1(200,200);
-
     delay(d);
+
+//17th move
 
     pawnWhite(50,350);
+    for(int e=350; e>=300; e-=1){
+        pawnBlue1(50,e);
+        setcolor(WHITE);
+        for(int e=350;e<400;e+=1){
+            line(51,e,99,e);
+        }
+        setcolor(GREEN);
+        for(int e=300;e<350;e+=1){
+            line(51,e,99,e);
+        }
+    }
     delay(d);
     pawnBlue1(50,300);
 
-    delay(d);
+    delay(1000);
 
-    queenGreen(200,50);
-    delay(d);
+//18th move
+
+    for(int e=50,f=200;e<=100,f>=150;e+=1,f-=1){
+        queenBlack(f,e);
+        setcolor(GREEN);
+        for(int e=50;e<100;e+=1){
+            line(200,e,249,e);
+        }
+        setcolor(WHITE);
+        for(int e=100;e<150;e+=1){
+            line(200,e,249,e);
+        }
+        setcolor(GREEN);
+        for(int e=100;e<150;e+=1){
+            line(151,e,199,e);
+        }
+        setcolor(WHITE);
+        for(int e=50;e<100;e+=1){
+            line(151,e,199,e);
+        }
+        bishopBlack(150,50);
+    }
+    bishopBlack(150,50);
+    for(int e=100,f=150;e<=150,f>=100;e+=1,f-=1){
+        queenBlack(f,e);
+        setcolor(GREEN);
+        for(int e=100;e<150;e+=1){
+            line(150,e,199,e);
+        }
+        setcolor(WHITE);
+        for(int e=150;e<200;e+=1){
+            line(150,e,199,e);
+        }
+        setcolor(GREEN);
+        for(int e=150;e<200;e+=1){
+            line(101,e,149,e);
+        }
+        setcolor(WHITE);
+        for(int e=100;e<150;e+=1){
+            line(101,e,149,e);
+        }
+        pawnBlack1(100,100);
+        knightBlack(150,150);
+    }
+    pawnBlack1(100,100);
+    knightBlack(150,150);
+    for(int e=150,f=100;e<=200,f>=50;e+=1,f-=1){
+        queenBlack(f,e);
+        setcolor(GREEN);
+        for(int e=150;e<200;e+=1){
+            line(100,e,149,e);
+        }
+        setcolor(WHITE);
+        for(int e=200;e<250;e+=1){
+            line(100,e,149,e);
+        }
+        setcolor(GREEN);
+        for(int e=200;e<250;e+=1){
+            line(51,e,99,e);
+        }
+        setcolor(WHITE);
+        for(int e=150;e<200;e+=1){
+            line(51,e,99,e);
+        }
+        pawnBlack1(50,150);
+    }
+    pawnBlack1(50,150);
     queenBlack(50,200);
 
-    delay(d);
+//19th move
 
-    knightGreen(200,250);
+    for(int e=250;e<=300;e+=1){
+        knightBlue(200,e);
+        setcolor(GREEN);
+        for(int e=250;e<300;e+=1){
+            line(201,e,249,e);
+        }
+        setcolor(WHITE);
+        for(int e=300;e<350;e+=1){
+            line(201,e,249,e);
+        }
+    }
+    for(int e=200;e>=150;e-=1){
+        knightBlue(e,300);
+        setcolor(WHITE);
+        for(int e=300;e<350;e+=1){
+            line(200,e,249,e);
+        }
+        setcolor(GREEN);
+        for(int e=300;e<350;e+=1){
+            line(151,e,199,e);
+        }
+        knightBlue(150,300);
+    }
+    for(int e=150;e>=100;e-=1){
+        knightBlue(e,300);
+        setcolor(GREEN);
+        for(int e=300;e<350;e+=1){
+            line(150,e,199,e);
+        }
+        setcolor(WHITE);
+        for(int e=300;e<350;e+=1){
+            line(100,e,149,e);
+        }
+        knightBlue(150,300);
+    }
     delay(d);
     knightBlue(100,300);
 
-    delay(d);
+//20th move
 
-    bishopGreen(100,250);
-    delay(d);
-    knightGreen(150,300);
-    delay(d);
+    for(int e=250,f=100;e<=300,f<=150;e+=D,f+=D){
+        bishopBlack(f,e);
+        setcolor(GREEN);
+        for(int e=250;e<300;e+=1){
+            line(101,e,149,e);
+        }
+        setcolor(WHITE);
+        for(int e=250;e<300;e+=1){
+            line(150,e,199,e);
+        }
+        setcolor(GREEN);
+        for(int e=300;e<350;e+=1){
+            line(150,e,199,e);
+        }
+        setcolor(WHITE);
+        for(int e=300;e<350;e+=1){
+            line(101,e,149,e);
+        }
+        knightBlue(100,300);
+    }
+    knightBlue(100,300);
     bishopBlack(150,300);
 
-    delay(d);
+//21st move
 
-    pawnGreen(100,350);
-    delay(d);
-    bishopGreen(150,300);
-    delay(d);
+    for(int e=350,f=100; e>=300,f<=150;e=e-D,f=f+D){
+        pawnBlue1(f,e);
+        setcolor(GREEN);
+        for(int e =350; e<400; e+=1){
+            line(101,e,149,e);
+        }
+        setcolor(WHITE);
+        for(int e =350; e<400; e+=1){
+            line(150,e,199,e);
+        }
+        setcolor(WHITE);
+        for(int e =300; e<350; e+=1){
+            line(101,e,149,e);
+        }
+        setcolor(GREEN);
+        for(int e =300 ;e<350; e+=1){
+            line(150,e,199,e);
+        }
+        knightBlue(100,300);
+        pawnBlue1(150,350);
+    }
     pawnBlue1(150,300);
-
+    d=1000;
     delay(d);
 
     queenGreen(50,200);
