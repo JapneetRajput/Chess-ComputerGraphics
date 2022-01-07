@@ -564,7 +564,7 @@ int main()
     initgraph(&gd,&gm,"D:\\TC\\BGI");//initialize graphic mode
 //    setbkcolor(WHITE);//set color of background to darkgray
 //    int y;
-    scanf("%d",&y);
+//    scanf("%d",&y);
     printf("AN ANIMATED CHESS MATCH REPLAY OF MAGNUS CARLSEN VS VISHWANATHAN ANAND\nHELD IN 2005\nTOURNAMENT NAME: CIUDAD DE LEON(XVIII");
     setcolor(WHITE);
 	outtextxy(25,65,"8");
